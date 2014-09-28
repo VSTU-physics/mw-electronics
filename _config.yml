@@ -1,0 +1,10 @@
+# Site settings
+title: "Электроника СВЧ"
+description: ""
+baseurl: "/mw-electronics"
+url: "http://vstu-physics.github.io"
+github_username:  vstu-physics
+
+# Build settings
+markdown: kramdown
+permalink: pretty
