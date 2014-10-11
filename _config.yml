@@ -3,6 +3,7 @@ title: "Электроника СВЧ"
 description: ""
 baseurl: "/mw-electronics"
 url: "http://vstu-physics.github.io"
+timezone: Europe/Volgograd
 github_username:  vstu-physics
 
 # Build settings
