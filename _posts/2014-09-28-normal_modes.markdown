@@ -16,9 +16,35 @@ $$
 системе реализуется только одна мода колебаний -- маятник колеблется вблизи
 положения равновесия со своей собственной частотой.
 
+<figure>
+<svg id="pendulum"></svg>
+</figure>
+
+<script>
+(function(){
+    var svg = d3.select("body").select("svg#pendulum");
+    svg.style("width", "200px")
+    svg.style("height", "200px")
+    Oscillations.onePendulum(svg, [0.1, 0]);
+})();
+</script>
+
 Для демонстрации нескольких мод колебаний нужно усложнить систему. Возьмём два
 одинаковых маятника, повесим их рядом и свяжем их пружиной. Тогда их уравнения
 движения примут вид
+
+<figure>
+<svg id="common"></svg>
+</figure>
+
+<script>
+(function(){
+    var svg = d3.select("body").select("svg#common");
+    svg.style("width", "200px")
+    svg.style("height", "200px")
+    Oscillations.twoPendulums(svg, [0.1, 0, 0, 0]);
+})();
+</script>
 
 $$
     \begin{cases}
@@ -52,6 +78,23 @@ $$
 $$
 
 называется _модами нормальных колебаний_.
+
+<figure>
+<svg id="mode1"></svg>
+<svg id="mode2"></svg>
+</figure>
+<script>
+(function(){
+    var svg1 = d3.select("body").select("svg#mode1");
+    var svg2 = d3.select("body").select("svg#mode2");
+    svg1.style("width", "200px")
+    svg1.style("height", "200px")
+    svg2.style("width", "200px")
+    svg2.style("height", "200px")
+    Oscillations.twoPendulums(svg1, [0.05, 0, 0.05, 0]);
+    Oscillations.twoPendulums(svg2, [0.05, 0, -0.05, 0]);
+})();
+</script>
 
 Таким образом, модами нормальных колебаний называют независимые друг от друга
 колебания. Величины, относительно которых движение системы записывается в виде
