@@ -237,7 +237,7 @@ i\beta E_{1r}+\frac{\partial E_{1z}}{\partial r}=i\mu_0\omega H_{1\phi}
 \end{cases}$$
 
 После простых подстановок можно получить уравнение Бесселя относительно 
-$$E_{1r}$$:
+$$E_{1z}$$:
 
 $$\frac{\partial^2 E_{1z}}{\partial r^2}+\frac{1}{r}
 \frac{\partial E_{1z}}{\partial r}+\left(T^2-\frac{n^2}{r^2}\right)
