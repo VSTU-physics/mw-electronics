@@ -210,8 +210,7 @@ H_r& rH_{\phi} &0
 \end{array}\right|=\{i\beta H_{\phi},-i\beta H_r,\frac{1}{r}
 ((rH_{\phi})'_r-i\beta H_r)\};$$
 
-$$E_{1z}=i\frac{(\omega-\beta v_0)^2}{\omega \epsilon_0 \omega_p^2}j_{1z} 
-;$$
+$$E_{1z}=i\frac{(\omega-\beta v_0)^2}{\omega \epsilon_0 \omega_p^2}j_{1z} ;$$
 
 $$ rot \vec{E_1}=
 \left|
@@ -255,8 +254,7 @@ $$E_{1z}=AJ_n(Tr)+BN_n(Tr), $$
 где $$J_n(x)$$ --- функция Бесселя, $$N_n(x)$$ --- функция Неймана.
 
 
-! $\left(\frac{\omega}{c}\right)^2<<\beta^2$, т.е. $
-\beta \sim \beta_e=\frac{\omega}{v_0}$, тогда R можно определить 
+! $$\left(\frac{\omega}{c}\right)^2<<\beta^2$$, т.е. $$\beta \sim \beta_e=\frac{\omega}{v_0}$$, тогда R можно определить 
 из:
 
 $$T^2=\beta\left(\frac{1}{R}-1\right). $$ 
