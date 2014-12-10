@@ -1,0 +1,13 @@
+\documentclass{hedwork}
+\usepackage{circuitikz}
+\begin{document}
+\begin{circuitikz} \draw
+(0,0) to [R=Rdz] (2,0) to [L=Ldz] (4,0)
+(4,0) -- (7,0)
+(4,0) to [C=Cdz] (4,-3)
+(6,0) to [R=Gdz] (6,-3)
+(0,-3) -- (7,-3)
+(0,0) to [open, v>=$u$] (0, -3)
+(7,-3) to [open, v=$u+du$] (7,0);
+\end{circuitikz}
+\end{document}
