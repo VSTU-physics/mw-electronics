@@ -2,7 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[russian]{babel}
 \usepackage[derivative]{hedmaths}
-\usepackage{circuitikz}
+\usepackage[european resistors, american inductors]{circuitikz}
 \begin{document}
 \section{Уравнение однородной линии передачи в виде нормальных волн}
 Рассмотрим малый участок двухпроводной линии с погонными параметрами
@@ -11,12 +11,12 @@
     \center
     \begin{circuitikz} \draw
         (0,0) to [R=Rdz] (2,0) to [L=Ldz] (4,0)
-        (4,0) -- (7,0)
+        (4,0) -- (8,0)
         (4,0) to [C=Cdz] (4,-3)
         (6,0) to [R=Gdz] (6,-3)
-        (0,-3) -- (7,-3)
+        (0,-3) -- (8,-3)
         (0,0) to [open, v>=$u$] (0, -3)
-        (7,-3) to [open, v=$u+du$] (7,0);
+        (8,-3) to [open, v=$u+du$] (8,0);
     \end{circuitikz}
 \end{figure}
 Запишем для него законы Кирхгофа:
@@ -74,7 +74,7 @@
 откуда ясно, что \( a_+ \) и \( a_- \) -- нормальные волны. Постоянную \( k \)
 определим из условия:
 \begin{equation}
-    P = ui = a_+^2 - a_-^2 = 4k^2uiZ,\quad k = \frac{1}{4\sqrt{Z}}.
+    P = ui = a_+^2 - a_-^2 = 4k^2uiZ,\quad k = \frac{1}{2\sqrt{Z}}.
 \end{equation}
 Среди прочих, решениями этой системы являются функции
 \begin{equation}
