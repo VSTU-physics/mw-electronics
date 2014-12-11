@@ -1,13 +1,97 @@
 \documentclass{hedwork}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[derivative]{hedmaths}
 \usepackage{circuitikz}
 \begin{document}
-\begin{circuitikz} \draw
-(0,0) to [R=Rdz] (2,0) to [L=Ldz] (4,0)
-(4,0) -- (7,0)
-(4,0) to [C=Cdz] (4,-3)
-(6,0) to [R=Gdz] (6,-3)
-(0,-3) -- (7,-3)
-(0,0) to [open, v>=$u$] (0, -3)
-(7,-3) to [open, v=$u+du$] (7,0);
-\end{circuitikz}
+\section{Уравнение однородной линии передачи в виде нормальных волн}
+Рассмотрим малый участок двухпроводной линии с погонными параметрами
+\( L,\ C,\ R,\ G \):
+\begin{figure}[h]
+    \center
+    \begin{circuitikz} \draw
+        (0,0) to [R=Rdz] (2,0) to [L=Ldz] (4,0)
+        (4,0) -- (7,0)
+        (4,0) to [C=Cdz] (4,-3)
+        (6,0) to [R=Gdz] (6,-3)
+        (0,-3) -- (7,-3)
+        (0,0) to [open, v>=$u$] (0, -3)
+        (7,-3) to [open, v=$u+du$] (7,0);
+    \end{circuitikz}
+\end{figure}
+Запишем для него законы Кирхгофа:
+\begin{equation}
+    \left\{
+        \begin{array}{l}
+            iR + L\pder{i}{t} = -\pder{u}{z},\\
+            C\pder{u}{t} + Gu = -\pder{i}{z}.
+    \end{array}
+    \right.
+\end{equation}
+Пренебрегая потерями в линии (\( R = G = 0 \)), получим более простую
+систему:
+\begin{equation}
+    \left\{
+        \begin{array}{l}
+            L\pder{i}{t} = -\pder{u}{z},\\
+            C\pder{u}{t} = -\pder{i}{z}.
+    \end{array}
+    \right.
+\end{equation}
+
+Введём поняттие волнового сопротивления линии:
+\begin{equation}
+    Z = \sqrt{\frac{L}{C}},
+\end{equation}
+и домножив на него второе уравнение, получим:
+\begin{equation}
+    \left\{
+        \begin{array}{l}
+            L\pder{i}{t} = -\pder{u}{z},\\
+            ZC\pder{u}{t} = -Z\pder{i}{z}.
+    \end{array}
+    \right.
+\end{equation}
+Теперь сложим и вычтем эти уравнения друг из друга:
+\begin{equation}
+    \left\{
+        \begin{array}{l}
+            L\pder{i}{t} + ZC\pder{u}{t} = -\pder{u}{z} - Z\pder{i}{z},\\
+            L\pder{i}{t} - ZC\pder{u}{t} = -\pder{u}{z} + Z\pder{i}{z}.
+    \end{array}
+    \right.
+\end{equation}
+Обозначим \( a_+ = k(u + Zi), a_- = k(u - Zi) \), где \( k \) -- некоторая
+постоянная, и перепишем систему в виде:
+\begin{equation}
+    \left\{
+        \begin{array}{l}
+            \pder{a_+}{z} = -\sqrt{LC}\pder{a_+}{z},\\
+            \pder{a_-}{z} = \sqrt{LC}\pder{a_-}{z},
+    \end{array}
+    \right.
+\end{equation}
+откуда ясно, что \( a_+ \) и \( a_- \) -- нормальные волны. Постоянную \( k \)
+определим из условия:
+\begin{equation}
+    P = ui = a_+^2 - a_-^2 = 4k^2uiZ,\quad k = \frac{1}{4\sqrt{Z}}.
+\end{equation}
+Среди прочих, решениями этой системы являются функции
+\begin{equation}
+    a_+ = \dot{a}_+e^{i(\omega t - \beta z)} +
+          \dot{a}_+^*e^{-i(\omega t - \beta z)},\quad
+    a_- = \dot{a}_-e^{i(\omega t + \beta z)} +
+          \dot{a}_-^*e^{-i(\omega t + \beta z)},
+\end{equation}
+где \( \dot{a}_+ \) и \( \dot{a}_- \) -- комплексные амплитуды,
+\( \beta = \omega\sqrt{LC} \) -- постоянная распространения.
+
+Определим фазовую и групповвую скорости таких волн:
+\begin{equation}
+    v_p = \frac{\omega}{\beta} = \sqrt{\frac{1}{LC}},\quad
+    v_g = \pder{\omega}{\beta} = v_p\left[1-\beta\pder{v_p}{\omega}\right]^{-1}.
+\end{equation}
+
+\section{Уравнение связанных волн в замедляющей структуре}
+
 \end{document}
