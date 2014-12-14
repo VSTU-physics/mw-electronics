@@ -92,6 +92,56 @@
     v_g = \pder{\omega}{\beta} = v_p\left[1-\beta\pder{v_p}{\omega}\right]^{-1}.
 \end{equation}
 
-\section{Уравнение связанных волн в замедляющей структуре}
+\section{Уравнение связанных волн в активном ответвителе}
+Рассмотрим распространение волн в слабосвязанных структурах без потерь. Пусть в
+каждой из структур возбуждается только одна из мод
+(назовём их \(a_1\) и \(a_2\), \( \beta_1 \approx \beta_2 \)) и нам известны
+погонные коэффициенты связи \( c_{12} \) и \( c_{21} \). Так как мы
+рассматриваем активный ответвитель, то волны в структурах бегут в разные
+стороны. Система в этом случае имеет вид:
 
+\begin{equation}
+    \left\{
+    \begin{array}{l}
+        \pder{a_1}{z} = -i\beta_1 a_1 + c_{12}a_2,\\
+        \pder{a_2}{z} = i\beta_2 a_2 + c_{21}a_1.
+    \end{array}
+    \right.
+\end{equation}
+
+Коэффициент передачи
+\begin{equation}
+    F_{12} = \left[1 - \frac{(\beta_1 + \beta_2)^2}{4c_{12}c_{21}}\right]^{-1}
+    \approx 1.
+\end{equation}
+
+Ищем решение системы в виде \( e^{\gamma z} \):
+\begin{equation}
+    \begin{vmatrix}
+        -i\beta_1-\gamma & c_{12} \\
+        c_{21} & i\beta_2-\gamma
+    \end{vmatrix}
+    = 0,
+\end{equation}
+\begin{equation}
+    \gamma_{1,2} = -i\frac{\beta_1-\beta_2}{2} \pm \sqrt{-\frac{(\beta_1 -
+    \beta_2)^2}{4} - \beta_1\beta_2 + c_{12}c_{21}}=
+    -i\beta \pm \delta,
+\end{equation}
+
+\[
+    \beta = \frac{\beta_1 - \beta_2}{2},\quad
+    \delta = \sqrt{\frac{c_{12}c_{21}}{F_{12}}}.
+\]
+
+Таким образом,
+\begin{align}
+    a_1(z) & = e^{-i\beta z}\left(c_1 e^{-\delta z} + c_2e^{\delta z}\right),\\
+    a_2(z) & = \frac{e^{-i\beta z}}{c_{12}}
+    \left[(i\beta' - \delta)c_1e^{-\delta z}+
+    (i\beta'+\delta)c_2e^{\delta z}\right],\quad
+    \beta' = \frac{\beta_1+\beta_2}{2}.
+\end{align}
+
+В ответвителе с активной связью \( a_2(l) = 0 \).
 \end{document}
