@@ -41,7 +41,7 @@ $$
 где
 
 $$
-	Z_1 = \sqrt{\frac{L}{C}},\quad Z_2 = \sqrt{2U_0}{|I_0|}\frac{\omega_q}{\omega}.
+	Z_1 = \sqrt{\frac{L}{C}},\quad Z_2 = \frac{2U_0}{|I_0|}\frac{\omega_q}{\omega}.
 $$
 
 Выражая токи и напряжения через связанные волны, получаем систему
