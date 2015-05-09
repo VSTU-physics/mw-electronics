@@ -1,0 +1,119 @@
+---
+layout: post
+title: Лампа бегущей волны О-типа
+date: 2015-05-09T13:33:41+03:00
+---
+
+## Общий случай ЛБВО
+
+Рассмотрим подробнее полученную ранее систему:
+
+$$
+	\begin{cases}
+		\frac{d}{dz} a_{1+} = -i\beta a_{1+} - c_{12}a_{2+} + c_{12}a_{2-},\\
+		\frac{d}{dz} a_{1-} = -i\beta a_{1-} + c_{12}a_{2+} - c_{12}a_{2-},\\
+		\frac{d}{dz} a_{2+} = -c_{12} a_{1+} - c_{12}a_{1-} - i(\beta_e - \beta_q)a_{2+},\\
+		\frac{d}{dz} a_{2-} = -c_{12} a_{1+} - c_{12}a_{1-} - i(\beta_e + \beta_q)a_{2-}.
+	\end{cases}
+$$
+
+Определим для неё коэффициенты связи $$ F_{ij} $$:
+$$
+	F_{1+,2\pm} = \left[1 \mp \frac{(-i\beta - i(\beta_e \mp \beta_q))^2}{4 c_{12}^2}\right]^{-1} = \left[1 \pm \frac{\sqrt{4QC}}{2}(b\pm\sqrt{4QC})^2\right]^{-1},
+$$
+$$
+	F_{1-,2\pm} = \left[1 \mp \frac{2\sqrt{4QC}}{C^2}\right]^{-1} \ll 1.
+$$
+
+Следовательно, связью с обратной волной системы можно пренебречь и упростить систему:
+
+$$
+	\begin{cases}
+		\frac{d}{dz} a_{1+} = -i\beta a_{1+} - c_{12}a_{2+} + c_{12}a_{2-},\\
+		\frac{d}{dz} a_{2+} = -c_{12} a_{1+} - i(\beta_e - \beta_q)a_{2+},\\
+		\frac{d}{dz} a_{2-} = -c_{12} a_{1+} - i(\beta_e + \beta_q)a_{2-}.
+	\end{cases}
+$$
+
+Если переписать это в матричном виде, то получим
+
+$$
+	\frac{da}{dz} = \begin{pmatrix}
+	-i\beta & -c_{12} & c_{12} \\
+	-c_{12} & -i\beta_e(1-C\sqrt{4QC}) & 0 \\
+	-c_{12} & 0 & -i\beta_e(1+C\sqrt{4QC})
+	\end{pmatrix}
+	a,
+$$
+
+$$
+	\frac{da}{dz}= -i\beta_e\begin{pmatrix}
+	1+Cb & \xi & -\xi \\
+	\xi & 1-C\sqrt{4QC} & 0 \\
+	\xi & 0 & 1+C\sqrt{4QC}
+	\end{pmatrix}
+	a,
+$$
+
+где $$ \xi = \frac{C}{2\sqrt[4]{QC}} $$.
+
+Будем искать собственные значения этой матрицы в виде $$ -i\beta_e(1+iC\delta) $$:
+
+$$
+	\begin{vmatrix}
+	C(b-i\delta) & \xi & -\xi \\
+	\xi & -C(\sqrt{4QC}+i\delta) & 0 \\
+	\xi & 0 & C(\sqrt{4QC}-i\delta)
+	\end{vmatrix} = 0,
+$$
+
+$$
+	-C^3(b-i\delta)(4QC+\delta^2) - C\xi^2(\sqrt{4QC}+i\delta) - C\xi^2(\sqrt{4QC}-i\delta) = 0,
+$$
+
+$$
+	C^2(b-i\delta)(4QC+\delta^2) + 2\xi^2\sqrt{4QC} = 0,
+$$
+
+$$
+	(b-i\delta)(4QC+\delta^2) + 1 = 0.
+$$
+
+Решение кубического уравнения получется довольно громоздким, поэтому рассмотрим его графическое решение ($$\delta = x + iy $$):
+
+{% include figure.html src='/img/ЛБВО/solution.png' caption='Постоянные распространения нормальных волн ЛБВ при QC = 0,25' %}
+
+## Случай больших QC
+
+В случае больших QC коэффициенты связи одноврененно не обращаются в ноль, если $$ b \approx \pm\sqrt{4QC} $$, причём ЛБВО соответствует случай $$ b \approx \sqrt{4QC} $$. При этом $$ F_{1+,2+} \ll 1 $$ и взаимодействием с быстрой волной можно пренебречь. При этом система упрощается:
+
+$$
+	\frac{da}{dz}= -i\beta_e\begin{pmatrix}
+	1+Cb & -\xi \\
+	\xi & 1+C\sqrt{4QC}
+	\end{pmatrix}
+	a.
+$$
+
+Собственные значения в том же виде $$ -i\beta_e(1+iC\delta) $$ приводят к уравнению
+
+$$
+	\begin{vmatrix}
+	C(b-i\delta) & -\xi \\
+	\xi & C(\sqrt{4QC}-i\delta)
+	\end{vmatrix} = 0,
+$$
+
+$$
+	(b-i\delta)(\sqrt{4QC}-i\delta) + \frac{1}{2\sqrt{4QC}} = 0,
+$$
+
+$$
+	\delta^2 + i(b + \sqrt{4QC})\delta - b\sqrt{4QC} - \frac{1}{2\sqrt{4QC}} = 0.
+$$
+
+Его решения
+
+$$
+	\delta_{1,2} = -i\frac{b+\sqrt{4QC}}{2} \pm \sqrt{\frac{1}{2\sqrt{4QC}} - \left(\frac{b-\sqrt{4QC}}{2}\right)^2}.
+$$

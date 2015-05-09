@@ -23,7 +23,7 @@ date: 2015-05-08T17:03:14+03:00
 $$
 	\begin{cases}
 	\frac{dU_1}{dz} = -i\omega L I_1,\\
-	\frac{dI_1}{dz} = -i\omega C U_1 - \frac{dI_1}{dz}.	
+	\frac{dI_1}{dz} = -i\omega C U_1 - \frac{dI_2}{dz}.	
 	\end{cases}
 $$
 
