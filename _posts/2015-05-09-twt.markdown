@@ -115,5 +115,67 @@ $$
 Его решения
 
 $$
-	\delta_{1,2} = -i\frac{b+\sqrt{4QC}}{2} \pm \sqrt{\frac{1}{2\sqrt{4QC}} - \left(\frac{b-\sqrt{4QC}}{2}\right)^2}.
+	\delta_{1,2} = -i\frac{b+\sqrt{4QC}}{2} \pm \frac{1}{2}\sqrt{\frac{1}{2\sqrt{4QC}} - \left(\frac{b-\sqrt{4QC}}{2}\right)^2} = -i\delta'' \pm \delta'.
 $$
+
+Обозначив $$ \gamma_{1,2} = i\beta_e(1+iC\delta_{1,2}) $$ имеем
+
+$$
+\begin{aligned}
+	& a_{1+} = c_1e^{-\gamma_1z} + c_2e^{-\gamma_2z},\\
+	& a_{2-} = c_3e^{-\gamma_1z} + c_4e^{-\gamma_2z},\\
+\end{aligned}
+$$
+
+где $$ (c_1, c_3) $$ и $$ (c_2, c_4) $$ -- собственные векторы матрицы.
+Следовательно,
+
+$$
+\begin{aligned}
+	& с_3 = \frac{C(b-i\delta_1)}{\xi}c_1 = 2\sqrt[4]{QC}(b-i\delta_1)c_1,\\
+	& с_4 = 2\sqrt[4]{QC}(b-i\delta_2)c_2.
+\end{aligned}
+$$
+
+Теперь учтём ГУ. В систему вводится СВЧ-энергия, которая взаимодействует с потоком, поэтому для удобства примем
+
+$$
+	a_{1+}(0) = \frac{1}{\sqrt{2}},\quad a_{2-}(0) = 0.
+$$
+
+Отсюда
+
+$$
+\begin{cases}
+	c_1 + c_2 = 1/\sqrt{2},\\
+	(b-i\delta_1)c_1 + (b-i\delta_2)c_2 = 0.
+\end{cases}
+$$
+
+Решая эту систему, получаем
+
+$$
+	c_1 = -\frac{b-i\delta_2}{i(\delta_2-\delta_1)\sqrt{2}} = \frac{b - \delta'' + i\delta'}{2i\delta'\sqrt{2}} = \frac{1}{2\sqrt{2}}\left(1 - i\frac{b-\delta''}{\delta'}\right),
+$$
+
+$$
+	c_2 = \frac{b-i\delta_1}{i(\delta_2-\delta_1)\sqrt{2}} = -\frac{b-\delta'' -i\delta'}{2i\delta'\sqrt{2}} = \frac{1}{2\sqrt{2}}\left(1 + i\frac{b-\delta''}{\delta'}\right).
+$$
+
+Для амплитуды ЭМ волны получаем
+
+$$
+	a_{1+}(z) = \frac{1}{2\sqrt{2}}\left[\left(1 - i\frac{b-\delta''}{\delta'}\right)e^{C\beta_e\delta' z} e^{-i\beta_e (1 + C\delta'') z} + \left(1 + i\frac{b-\delta''}{\delta'}\right)e^{-C\beta_e\delta' z} e^{-i\beta_e (1 + C\delta'') z}\right],
+$$
+
+$$
+	a_{1+}(z) = \frac{1}{\sqrt{2}}\left[\cosh(C\beta_e\delta' z) - i\frac{b-\delta''}{\delta'}\sinh(C\beta_e\delta' z) \right]e^{-i\beta_e (1 + C\delta'') z},
+$$
+
+а для мощности
+
+$$
+	P_{1+} = 2|a_{1+}|^2 = \left[\cosh^2(C\beta_e\delta' z) + \left(\frac{b-\delta''}{\delta'}\right)^2\sinh^2(C\beta_e\delta' z) \right].
+$$
+
+Нетрудно видеть, что мощность растёт, то есть волна отбирает энергию у электронного потока.
