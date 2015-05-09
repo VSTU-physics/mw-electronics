@@ -11,7 +11,7 @@ date: 2015-05-09T13:33:41+03:00
 $$
 	\begin{cases}
 		\frac{d}{dz} a_{1+} = -i\beta a_{1+} - c_{12}a_{2+} + c_{12}a_{2-},\\
-		\frac{d}{dz} a_{1-} = -i\beta a_{1-} + c_{12}a_{2+} - c_{12}a_{2-},\\
+		\frac{d}{dz} a_{1-} = i\beta a_{1-} + c_{12}a_{2+} - c_{12}a_{2-},\\
 		\frac{d}{dz} a_{2+} = -c_{12} a_{1+} - c_{12}a_{1-} - i(\beta_e - \beta_q)a_{2+},\\
 		\frac{d}{dz} a_{2-} = -c_{12} a_{1+} - c_{12}a_{1-} - i(\beta_e + \beta_q)a_{2-}.
 	\end{cases}

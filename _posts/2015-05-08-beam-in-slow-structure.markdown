@@ -55,7 +55,7 @@ $$
 
 $$
 	\begin{cases}
-	\left(\frac{d}{dz} + i\beta\right)a_{1\pm} = \mp\frac{1}{2}\sqrt{\frac{Z_1}{Z_2}}\frac{d}{dz}(a_{2-} - a_{2+}),\\
+	\left(\frac{d}{dz} \pm i\beta\right)a_{1\pm} = \mp\frac{1}{2}\sqrt{\frac{Z_1}{Z_2}}\frac{d}{dz}(a_{2-} - a_{2+}),\\
 	\left(\frac{d}{dz} + i(\beta_e\mp\beta_q)\right)a_{2\pm} = \frac{1}{2}\sqrt{\frac{Z_1}{Z_2}}\frac{d}{dz}(a_{1+} + a_{1-}).
 	\end{cases}
 $$
@@ -64,7 +64,7 @@ $$
 
 $$
 	\begin{cases}
-	\left(\frac{d}{dz} + i\beta\right)a_{1\pm} = \mp c_{12}(a_{2-} - a_{2+}),\\
+	\left(\frac{d}{dz} \pm i\beta\right)a_{1\pm} = \mp c_{12}(a_{2-} - a_{2+}),\\
 	\left(\frac{d}{dz} + i(\beta_e\mp\beta_q)\right)a_{2\pm} = -c_{12}(a_{1+} + a_{1-}),
 	\end{cases}
 $$
@@ -96,7 +96,7 @@ $$
 $$
 	\begin{cases}
 		\frac{d}{dz} a_{1+} = -i\beta a_{1+} - c_{12}a_{2+} + c_{12}a_{2-},\\
-		\frac{d}{dz} a_{1-} = -i\beta a_{1-} + c_{12}a_{2+} - c_{12}a_{2-},\\
+		\frac{d}{dz} a_{1-} = i\beta a_{1-} + c_{12}a_{2+} - c_{12}a_{2-},\\
 		\frac{d}{dz} a_{2+} = -c_{12} a_{1+} - c_{12}a_{1-} - i(\beta_e - \beta_q)a_{2+},\\
 		\frac{d}{dz} a_{2-} = -c_{12} a_{1+} - c_{12}a_{1-} - i(\beta_e + \beta_q)a_{2-}.
 	\end{cases}
