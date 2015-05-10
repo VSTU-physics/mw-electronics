@@ -1,0 +1,108 @@
+---
+layout: post
+title: Преобразователь Компфнера
+date: 2015-05-10T11:08:30+03:00
+---
+
+Теперь рассмотрим случай $$ b \approx -\sqrt{4QC} $$. В этом случае прямая волна структуры взаимодействует с быстрой волной пространственного заряда. Система принимает вид:
+
+$$
+	\frac{da}{dz}= -i\beta_e\begin{pmatrix}
+	1+Cb & \xi \\
+	\xi & 1-C\sqrt{4QC}
+	\end{pmatrix}
+	a.
+$$
+
+Снова ищем собственные значения в том же виде:
+
+$$
+	\begin{vmatrix}
+	C(b-i\delta) & -\xi \\
+	\xi & -C(\sqrt{4QC}+i\delta)
+	\end{vmatrix} = 0,
+$$
+
+$$
+	C^2(b-i\delta)(\sqrt{4QC}+i\delta) + \xi^2 = 0,
+$$
+
+$$
+	\delta^2 + i(b-\sqrt{4QC})\delta + b\sqrt{4QC} + \frac{1}{2\sqrt{4QC}} = 0,
+$$
+
+$$
+	\delta_{1,2} = -i\left[ \frac{b-\sqrt{4QC}}{2} \pm \sqrt{\frac{1}{2\sqrt{4QC}} + \left(\frac{b+\sqrt{4QC}}{2}\right)^2} \right] = -i(\delta' \pm \delta'').
+$$
+
+Решение имеет вид
+
+$$
+	a =
+	\begin{pmatrix}
+	c_1 \\ c_3
+	\end{pmatrix}
+	e^{-i\beta_e(1+iC\delta_1)z}
+	+
+	\begin{pmatrix}
+	c_2 \\ c_4
+	\end{pmatrix}
+	e^{-i\beta_e(1+iC\delta_2)z}
+$$
+
+где как и раньше $$ (c_1, c_3) $$ и $$ (c_2, c_4) $$ -- собственные векторы:
+
+$$
+	\begin{aligned}
+		& c_3 = -\frac{C(b-i\delta_1)}{\xi} = -2\sqrt[4]{QC}(b-i\delta_1)c_1,
+		& c_4 = -\frac{C(b-i\delta_2)}{\xi} = -2\sqrt[4]{QC}(b-i\delta_2)c_2.
+	\end{aligned}
+$$
+
+Теперь снова ГУ:
+
+$$
+	a_{1+}(0) = \frac{1}{\sqrt{2}},\quad a_{2+}(0) = 0,
+$$
+
+$$
+	\begin{cases}
+		c_1 + c_2 = 1/\sqrt{2},\\
+		(b-i\delta_1)c_1 + (b-i\delta_2)c_2 = 0,\\
+	\end{cases}
+$$
+
+$$
+	c_1 = -\frac{b-i\delta_2}{i(\delta_2-\delta_1)\sqrt{2}} = \frac{b-(\delta'-\delta'')}{2\delta''\sqrt{2}},
+$$
+
+$$
+	c_2 = \frac{b-i\delta_1}{i(\delta_2-\delta_1)\sqrt{2}} = -\frac{b-(\delta'+\delta'')}{2\delta''\sqrt{2}}.
+$$
+
+Волна структуры имеет вид
+
+$$
+	a_{1+} = \frac{1}{2\sqrt{2}}\left[\frac{b-(\delta'-\delta'')}{\delta''}e^{-i\beta_e(1+C(\delta' + \delta''))z} - \frac{b-(\delta'+\delta'')}{\delta''}e^{-i\beta_e(1+C(\delta' - \delta''))z}\right],
+$$
+
+$$
+	a_{1+} = \frac{1}{2\sqrt{2}}\left[\left(1 + \frac{b-\delta'}{\delta''}\right)e^{-i\beta_eC\delta''z} + \left(1 - \frac{b-\delta'}{\delta''}\right)e^{i\beta_eC\delta''z}\right]e^{-i\beta_e(1+C\delta')z},
+$$
+
+$$
+a_{1+} = \frac{1}{\sqrt{2}}\left[\cos(\beta_eC\delta''z) + i \frac{b-\delta'}{\delta''}\sin(\beta_eC\delta''z)\right]e^{-i\beta_e(1+C\delta')z},
+$$
+
+Мощность в волне
+
+$$
+	P_{1+}(z) = 2|a_{1+}|^2 = \cos^2(\beta_eC\delta''z) + \left(\frac{b-\delta'}{\delta''}\right)^2\sin^2(\beta_eC\delta''z) =
+	1 + \frac{(b-i\delta_1)(b-i\delta_2)}{\delta''^2}\sin^2(\beta_eC\delta''z).
+$$
+
+Подставим выражения для этих коэффициентов и получим в итоге
+
+$$
+	P_{1+}(z) = 1 - \frac{\sin^2(\beta_eC\delta''z)}{1 + 2\sqrt{4QC}\left(\frac{b+\sqrt{4QC}}{2}\right)^2}.
+$$

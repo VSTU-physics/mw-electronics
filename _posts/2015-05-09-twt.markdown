@@ -115,7 +115,7 @@ $$
 Его решения
 
 $$
-	\delta_{1,2} = -i\frac{b+\sqrt{4QC}}{2} \pm \frac{1}{2}\sqrt{\frac{1}{2\sqrt{4QC}} - \left(\frac{b-\sqrt{4QC}}{2}\right)^2} = -i\delta'' \pm \delta'.
+	\delta_{1,2} = -i\frac{b+\sqrt{4QC}}{2} \pm \sqrt{\frac{1}{2\sqrt{4QC}} - \left(\frac{b-\sqrt{4QC}}{2}\right)^2} = -i\delta'' \pm \delta'.
 $$
 
 Обозначив $$ \gamma_{1,2} = i\beta_e(1+iC\delta_{1,2}) $$ имеем
