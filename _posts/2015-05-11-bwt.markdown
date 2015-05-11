@@ -1,0 +1,133 @@
+---
+layout: post
+title: Лампа обратной волны
+date: 2015-05-11T12:28:22+03:00
+---
+
+В случае ЛБВ и преобразователя Компфнера рассматривалось взаимодействие волн пространственного заряда с низшими волнами структуры. У этих волн фазовая и групповая скорости сонаправлены. Однако, это не единственные волны структуры. Среди них есть также волны, у которых фазовая и групповая скорости направлены в противоположные стороны. На взаимодействии электронного потока с такими волнами построен принцип действия лампы обратной волны.
+
+С точки зрения уравнений для рассмотрения этих волн нужно изменить знак постоянной распространения у волн структуры $$ \beta \to -\beta $$:
+
+$$
+	\begin{cases}
+		\frac{d}{dz} a_{1+} = i\beta a_{1+} - c_{12}a_{2+} + c_{12}a_{2-},\\
+		\frac{d}{dz} a_{1-} = -i\beta a_{1-} + c_{12}a_{2+} - c_{12}a_{2-},\\
+		\frac{d}{dz} a_{2+} = -c_{12} a_{1+} - c_{12}a_{1-} - i(\beta_e - \beta_q)a_{2+},\\
+		\frac{d}{dz} a_{2-} = -c_{12} a_{1+} - c_{12}a_{1-} - i(\beta_e + \beta_q)a_{2-}.
+	\end{cases}
+$$
+
+Определим для этой системы коэффициенты связи $$ F_{ij} $$:
+$$
+	F_{1+,2\pm} = \left[1 \mp \frac{(i\beta + i(\beta_e \mp \beta_q))^2}{4 c_{12}^2}\right]^{-1} = \left[1 \pm \frac{2\sqrt{4QC}}{C^2}\right]^{-1} \ll 1,
+$$
+$$
+	F_{1-,2\pm} = \left[1 \mp \frac{\sqrt{4QC}}{2}(b\pm\sqrt{4QC})^2\right]^{-1}.
+$$
+
+Рассмотрим снова случай больших QC. Нас интересует взаимодействие медленной волны пространственного заряда с обратной волной структуры, поэтому $$ b \approx \sqrt{4QC} $$, так как в этом случае $$ F_{1-, 2-} \approx 1,\ F_{1-, 2+} \ll 1 $$.
+
+Укорачивая систему, получаем
+
+$$
+	\frac{da}{dz}= -i\beta_e\begin{pmatrix}
+	1+Cb & \xi \\
+	\xi & 1+C\sqrt{4QC}
+	\end{pmatrix}
+	a,
+$$
+
+Снова ищем $$ \delta $$:
+
+$$
+	\begin{vmatrix}
+	C(b-i\delta) & \xi \\
+	\xi & C(\sqrt{4QC}-i\delta)
+	\end{vmatrix} = 0,
+$$
+
+$$
+	C^2(b-i\delta)(\sqrt{4QC}-i\delta) - \xi^2 = 0,
+$$
+
+$$
+	\delta^2 + i(b+\sqrt{4QC}) - b\sqrt{4QC} + \frac{1}{2\sqrt{4QC}} = 0,
+$$
+
+$$
+	\delta_{1,2} = -i\left(\frac{b+\sqrt{4QC}}{2} \pm \sqrt{\frac{1}{2\sqrt{4QC}} + \left(\frac{b-\sqrt{4QC}}{2}\right)^2}\right) = -i(\delta'\pm\delta'').
+$$
+
+Решение имеет вид
+
+$$
+	a =
+	\begin{pmatrix}
+	c_1 \\ c_3
+	\end{pmatrix}
+	e^{-i\beta_e(1+C(\delta'+\delta''))z}
+	+
+	\begin{pmatrix}
+	c_2 \\ c_4
+	\end{pmatrix}
+	e^{-i\beta_e(1+C(\delta'-\delta''))z}
+	=\left[
+	\begin{pmatrix}
+	c_1 \\ c_3
+	\end{pmatrix}
+	e^{-i\beta_eC\delta''z}	+
+	\begin{pmatrix}
+	c_2 \\ c_4
+	\end{pmatrix}
+	e^{i\beta_eC\delta''z}
+	\right]e^{-i\beta_e(1+C\delta')z},
+$$
+
+$$
+	\begin{aligned}
+		& c_3 = -\frac{C(b-i\delta_1)}{\xi} = -2\sqrt[4]{QC}(b-\delta'-\delta'')c_1,\\
+		& c_4 = -\frac{C(b-i\delta_2)}{\xi} = -2\sqrt[4]{QC}(b-\delta'+\delta'')c_2.
+	\end{aligned}
+$$
+
+Теперь граничные условия. Мощность вводится в структуру на её конце, поэтому
+
+$$
+	a_{1-}(l) = \frac{1}{\sqrt{2}},\quad a_{2-}(0) = 0,
+$$
+
+$$
+	\begin{cases}
+		c_1e^{-i\beta_eC\delta''l} + c_2e^{i\beta_eC\delta''l} = e^{i\beta_e(1+C\delta')l}/\sqrt{2},\\
+		(b-\delta'-\delta'')c_1 + (b-\delta'+\delta'')c_2 = 0,\\
+	\end{cases}
+$$
+
+$$
+	c_1 = \frac{(b-\delta'+\delta'')e^{i\beta_e(1+C\delta')l}}{\sqrt{2}
+	((b-\delta'+\delta'')e^{-i\beta_eC\delta''l} - (b-\delta'-\delta'')e^{i\beta_eC\delta''l})}=
+	\frac{(b-\delta'+\delta'')e^{i\beta_e(1+C\delta')l}}{2\sqrt{2}
+	(\delta''\cos(\beta_eC\delta''l)-i(b-\delta')\sin(\beta_eC\delta''l))}
+$$
+
+$$
+	c_2 = 
+	-\frac{(b-\delta'-\delta'')e^{i\beta_e(1+C\delta')l}}{2\sqrt{2}
+	(\delta''\cos(\beta_eC\delta''l)-i(b-\delta')\sin(\beta_eC\delta''l))}
+$$
+
+Амплитуда обратной волны
+
+$$
+	a_{1-}(z) = \frac{1}{\sqrt{2}}\frac{\delta''\cos(\beta_eC\delta''z)-i(b-\delta')\sin(\beta_eC\delta''z)}{\delta''\cos(\beta_eC\delta''l)-i(b-\delta')\sin(\beta_eC\delta''l)}e^{-i\beta_e(1+C\delta')(z-l)}
+$$
+
+Мощность, переносимая волной структуры против направлениия оси z равна
+
+$$
+	P_{1-} = 2|a_{1-}|^2 = \frac{\delta''^2\cos^2(\beta_eC\delta''z)+(b-\delta')^2\sin^2(\beta_eC\delta''z)}{\delta''^2\cos^2(\beta_eC\delta''l)+(b-\delta')^2\sin^2(\beta_eC\delta''l)}
+$$
+
+$$
+	P_{1-} = \frac{1 - F\sin^2(\beta_eC\delta''z)}{1 - F\sin^2(\beta_eC\delta''l)}.
+$$

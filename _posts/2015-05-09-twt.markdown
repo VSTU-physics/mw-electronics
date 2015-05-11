@@ -19,7 +19,7 @@ $$
 
 Определим для неё коэффициенты связи $$ F_{ij} $$:
 $$
-	F_{1+,2\pm} = \left[1 \mp \frac{(-i\beta - i(\beta_e \mp \beta_q))^2}{4 c_{12}^2}\right]^{-1} = \left[1 \pm \frac{\sqrt{4QC}}{2}(b\pm\sqrt{4QC})^2\right]^{-1},
+	F_{1+,2\pm} = \left[1 \mp \frac{(-i\beta + i(\beta_e \mp \beta_q))^2}{4 c_{12}^2}\right]^{-1} = \left[1 \pm \frac{\sqrt{4QC}}{2}(b\pm\sqrt{4QC})^2\right]^{-1},
 $$
 $$
 	F_{1-,2\pm} = \left[1 \mp \frac{2\sqrt{4QC}}{C^2}\right]^{-1} \ll 1.
