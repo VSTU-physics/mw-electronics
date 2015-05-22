@@ -55,3 +55,111 @@ $$
 $$
 
 В случае вырожденных колебаний среди колебаний с одинаковой частотой всегда можно выбрать ортогональную систему.
+
+Рассмотрим теперь возбуждение резонатора электронным потоком с частотой $$ \omega $$. Уравнения Максвелла имеют вид
+
+$$
+	\begin{cases}
+		\operatorname{rot} \vec{E} = i\omega\mu\vec{H},\\
+		\operatorname{rot} \vec{H} = -i\omega\varepsilon\vec{E} + \vec{j},
+	\end{cases}
+$$
+
+а решение будем искать в виде разложения по собственным колебаниям резонатора:
+
+$$
+	\vec{E} = \sum_n A_n\vec{E}_n - \operatorname{grad} \phi,\quad \vec{H} = \sum_n B_n\vec{H}_n,
+$$
+
+где потенциал $$ \phi $$ учитывает поле потока. Подставим и получим:
+
+$$
+	\begin{cases}
+		\sum_n\operatorname{rot} A_n\vec{E}_n = i\omega\mu\sum_m B_m\vec{H}_m,\\
+		\sum_n\operatorname{rot} B_n\vec{H}_n = -i\omega\varepsilon(\sum_m A_m\vec{E}_m - \operatorname{grad}\phi) + \vec{j},
+	\end{cases}
+$$
+
+$$
+	\begin{cases}
+		\sum_n A_n\omega_n\vec{H}_n = \omega\sum_m B_m\vec{H}_m,\\
+		\sum_n B_n\omega_n\vec{E}_n = \omega(\sum_m A_m\vec{E}_m - \operatorname{grad}\phi) + \frac{i}{\varepsilon}\vec{j}.
+	\end{cases}
+$$
+
+Теперь воспользуемся ортогональностью собственных мод резонатора:
+
+$$
+	\begin{cases}
+		A_n\omega_n = \omega B_n,\\
+		B_n N_n\omega_n = \omega N_n A_n - \omega \langle\vec{E}_n, \operatorname{grad}\phi\rangle + i\langle\vec{E}_n,\frac{1}{\varepsilon}\vec{j}\rangle.
+	\end{cases}
+$$
+
+Заметим, что
+
+$$
+	\langle\vec{E}_n, \operatorname{grad}\phi\rangle = 0.
+$$
+
+В итоге получаем систему
+
+$$
+	\begin{cases}
+		\omega_n A_n - \omega B_n = 0,\\
+		\omega A_n - \omega_n B_n = - \frac{i}{N_n}\langle\vec{E}_n,\frac{1}{\varepsilon}\vec{j}\rangle,
+	\end{cases}
+$$
+
+из которой имеем
+
+$$
+	A_n = \frac{i\omega\langle\vec{E}_n,\frac{1}{\varepsilon}\vec{j}\rangle}{N_n(\omega_n^2 - \omega^2)}, \quad
+	B_n = \frac{i\omega_n\langle\vec{E}_n,\frac{1}{\varepsilon}\vec{j}\rangle}{N_n(\omega_n^2 - \omega^2)}.
+$$
+
+Введём обозначение
+
+$$
+	I_n = i\frac{\langle\vec{E}_n,\frac{1}{\varepsilon}\vec{j}\rangle}{N_n},
+$$
+
+тогда
+
+$$
+	A_n = \frac{\omega}{\omega_n^2 - \omega^2}I_n, \quad
+	B_n = \frac{\omega_n}{\omega_n^2 - \omega^2}I_n.
+$$
+
+Также можно ввести величины $$ \omega_{-n} = -\omega_n $$,
+
+$$
+	C_n = \frac{I_n}{2(\omega_n-\omega)},
+$$
+
+при помощи которых можно представить $$ A_n $$ и $$ B_n $$ в виде
+
+$$
+	A_n = C_n + C_{-n},\quad B_n = C_n - C_{-n}.
+$$
+
+Пусть теперь $$ \vec{j}(\omega) $$ медленно меняется со временем. Тогда коэффициенты разложения становятся функциями времени:
+
+$$
+	\begin{cases}
+		\omega_n A_n - \omega B_n - iB_n'  = 0,\\
+		\omega A_n + iA_n' - \omega_n B_n = - \frac{i}{N_n}\langle\vec{E}_n,\frac{1}{\varepsilon}\vec{j}\rangle,
+	\end{cases}
+$$
+
+Вычитая из первого уравнения второе, получим
+
+$$
+	\omega_n (A_n + B_n) - \omega(A_n + B_n) - i(A_n + B_n)' = \frac{i}{N_n}\langle\vec{E}_n,\frac{1}{\varepsilon}\vec{j}\rangle,
+$$
+
+$$
+	C_n' - i (\omega - \omega_n) C_n = -\frac{1}{2N_n}\langle\vec{E}_n,\frac{1}{\varepsilon}\vec{j}\rangle,
+$$
+
+Это уравнение называется уравнением возбуждения резонаторов.
