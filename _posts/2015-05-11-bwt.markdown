@@ -131,3 +131,5 @@ $$
 $$
 	P_{1-} = \frac{1 - F\sin^2(\beta_eC\delta''z)}{1 - F\sin^2(\beta_eC\delta''l)}.
 $$
+
+{% include figure.html src='/img/ЛОВ.png' caption='Зависимость переносимой мощности от координаты' %}

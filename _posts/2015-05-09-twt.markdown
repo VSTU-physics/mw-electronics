@@ -175,7 +175,9 @@ $$
 а для мощности
 
 $$
-	P_{1+} = 2|a_{1+}|^2 = \left[\cosh^2(C\beta_e\delta' z) + \left(\frac{b-\delta''}{\delta'}\right)^2\sinh^2(C\beta_e\delta' z) \right].
+	P_{1+} = 2|a_{1+}|^2 = \left\{1 + \left[1+\left(\frac{b-\delta''}{\delta'}\right)^2\right]\sinh^2(C\beta_e\delta' z) \right\}.
 $$
 
 Нетрудно видеть, что мощность растёт, то есть волна отбирает энергию у электронного потока.
+
+{% include figure.html src='/img/ЛБВО/power.png' caption='Зависимость переносимой мощности от координаты' %}
