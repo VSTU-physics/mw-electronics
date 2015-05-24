@@ -32,7 +32,7 @@ $$
 $$
 	\begin{cases}
 	\left(\frac{d}{dz} + i\beta_e\right)U_2 = -i \beta_q Z_2 I_2 + \frac{dU_1}{dz},\\
-	\left(\frac{d}{dz} + i\beta_e\right)U_2 = -i \frac{\beta_q}{Z_2}U_2.
+	\left(\frac{d}{dz} + i\beta_e\right)I_2 = -i \frac{\beta_q}{Z_2}U_2.
 	\end{cases}
 $$
 
