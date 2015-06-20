@@ -2,17 +2,9 @@
 layout: default
 ---
 
-<div class="home">
-
-  <h1>Содержание</h1>
-
-  <ul class="posts">
+  <h3 class="center light">Содержание</h3>
+  <ul class="collection">
     {% for post in site.posts %}
-      <li>
-        <!-- <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span> -->
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
+      <a class="collection-item black-text" href="{{ post.url | prepend: site.baseurl }}"><i class="mdi-action-description left"></i>{{ post.title }}</a>
     {% endfor %}
   </ul>
-
-</div>
